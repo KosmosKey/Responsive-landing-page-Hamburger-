@@ -1,0 +1,329 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+.menu-bar {
+    display: flex;
+    font-size: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: black;
+    text-align: center;
+    width: 60px;
+    height: 40px;
+    border-radius: 5px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.fa-bars {
+    margin-top: .45rem;
+}
+
+.menu-popup {
+    display: none;
+    width: 250px;
+    height: 100vh;
+    background: rgb(0, 159, 199);
+    box-shadow: 2px 5px 25px black;
+    position: absolute;
+    right: 0;
+    line-height: 3rem;
+}
+
+.menu-popup-desc {
+    display: block;
+    padding: 20px;
+
+    a:after {
+        content: "";
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        display: block;
+        height: 2px;
+        background: #fff;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0px;
+    }
+
+    a:hover:after {
+        width: 100%;
+        left: 0;
+    }
+
+    ul {
+        li {
+            list-style: none;
+
+            a {
+                display: inline-block;
+                width: 125px;
+                font-weight: 800;
+                display: block;
+                text-decoration: none;
+                color: white;
+                align-self: flex-start;
+                font-size: 1.3rem;
+                margin: 10px -40px 20px;
+                transition: 3s ease;
+
+            }
+        }
+    }
+}
+
+#welcome {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    width: 100%;
+    height: 100vh;
+
+    .image-logo {
+        max-width: 150px;
+    }
+
+    .image-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu {
+        background: white;
+        padding: 80px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .socials {
+        display: flex;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            border-radius: 50%;
+            margin-right: 15px;
+            background: grey;
+            width: 40px;
+            height: 40px;
+            transition: .5s ease;
+
+            &:hover {
+                background: white;
+                color: grey;
+            }
+        }
+    }
+
+    .menu-title {
+        width: 65%;
+        font-family: 'Nunito', sans-serif;
+        color: #ff3535;
+        font-size: 1.8rem;
+        border-bottom: 1px solid #b6b6b6;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
+
+
+
+    .menu-description {
+        display: block;
+        margin-bottom: 30px;
+
+        ul {
+            li {
+                list-style: none;
+
+                a {
+                    font-weight: 800;
+                    display: block;
+                    text-decoration: none;
+                    color: black;
+                    margin: 10px -40px 20px;
+                    transition: 1s ease;
+
+                    &:hover {
+                        color: #ff3535;
+                    }
+                }
+            }
+        }
+    }
+
+    .street-address {
+        position: absolute;
+        bottom: 100px;
+
+        p {
+            color: black;
+            font-weight: bold;
+        }
+
+        .phone {
+            color: #ff3535;
+            font-weight: bold;
+            font-size: 1.8rem;
+
+        }
+    }
+
+
+  
+    .background-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #ff3535;
+        background: (center, ellipse cover, #f85656 0%, #ff1b1b 100%);
+        background: radial-gradient(ellipse at center, #ff5555 0%, #c81e1e 100%);
+        width: 100%;
+        overflow: hidden;
+
+        .status {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: flex-start;
+            margin-left: 100px;
+            text-align: center;
+            color: white;
+            background: black;
+            width: 150px;
+            height: 50px;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.2rem;
+            transition: .5s ease;
+
+            &:hover {
+                background: white;
+                color: black;
+            }
+
+        }
+
+        .delicious {
+            padding-left: 100px;
+            font-size: 4rem;
+            font-weight: bold;
+            color: white;
+            align-self: flex-start;
+
+        }
+
+        .image-burger {
+            width: 100%;
+            max-width: 1000px;
+            animation: moveUpandDown 8s linear infinite;
+        }
+    }
+
+    @keyframes gradbar {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    // @keyframes moveUpandDown {
+
+    //     0%,
+    //     100% {
+    //         opacity: 0;
+    //     }
+
+    //     50% {
+    //         opacity: 1;
+    //     }
+    // }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .container-pop {
+        padding-right: 2rem;
+    }
+
+    .status {
+        margin-top: 5rem;
+    }
+
+    #nav {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        font-size: 2px;
+    }
+
+    #welcome {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .container-pop {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+     }
+
+    .status {
+        right: 1rem;
+    }
+
+    .delicious {
+        width: 350px;
+        font-size: 2.4rem !important;
+    }
+
+    .image-burger {
+        /*CSS transitions*/
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+        /*CSS transforms*/
+        -o-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        /*CSS animations*/
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+    }
+
+
+}
